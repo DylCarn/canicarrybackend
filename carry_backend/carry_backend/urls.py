@@ -20,4 +20,5 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("test_api/", include("apps.login_api.urls")),
+    path("disclaimer_api/",  include("apps.disclaimer_api.urls")),
 ]

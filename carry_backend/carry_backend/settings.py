@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.login_api',
+    'apps.disclaimer_api',
     'rest_framework',
     'corsheaders',
 ]
@@ -82,7 +83,7 @@ DATABASES = {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'postgres',
             'USER': 'postgres',
-            'PASSWORD': 'dad',
+            'PASSWORD': 'panthers',
             'HOST': 'localhost',
             'PORT': '5432',
         }
