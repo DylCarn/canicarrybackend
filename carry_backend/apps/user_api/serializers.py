@@ -8,6 +8,7 @@ class CarryUserSerializer(serializers.ModelSerializer):
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
+        print("call me?")
         user = CarryUser.objects.create(
             username=validated_data['username'],
             email=validated_data['email'],

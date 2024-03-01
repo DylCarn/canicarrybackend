@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.disclaimer_api',
     'apps.user_api',
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
 ]
 
