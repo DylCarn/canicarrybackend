@@ -8,15 +8,13 @@ from rest_framework import status
 class RegisterUser(CreateAPIView):
     serializer_class = CarryUserSerializer
     user_obj = None
+    
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
-        print(self.user_obj.pk)
         headers = self.get_success_headers(serializer.data)
         token = self.returntoken()
-        print(token)
-        print(serializer.data)
         return Response(data={'user':serializer.data, 'token': token}, status=status.HTTP_201_CREATED, headers=headers)
     
     def perform_create(self, serializer):
