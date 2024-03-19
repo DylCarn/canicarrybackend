@@ -29,7 +29,7 @@ class SignDisclaimer(APIView):
     
     def _sign_disclaimer(self, request):
         current_disclaimer = GetLastDisclaimer()
-        if current_disclaimer.pk == int(request.data['id']):
+        if current_disclaimer.pk == int(request.data['data']['id']):
             try:
                 user_obj = CarryUser.objects.get(pk=request.user.pk)
                 user_obj.disclaimer_id=current_disclaimer
